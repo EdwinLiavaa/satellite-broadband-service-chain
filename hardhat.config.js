@@ -10,13 +10,7 @@ require("./tasks/accounts")
 require("./tasks/balance")
 require("./tasks/withdraw-link")
 require("./tasks/block-number")
-require("./tasks/price-consumer")
-require("./tasks/random-number-consumer")
-require("./tasks/price-consumer")
-require("./tasks/api-consumer")
-require("./tasks/keepers")
 require("@appliedblockchain/chainlink-plugins-fund-link")
-
 require('dotenv').config()
 
 const MAINNET_RPC_URL = process.env.MAINNET_RPC_URL || process.env.ALCHEMY_MAINNET_RPC_URL || "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
@@ -34,9 +28,9 @@ module.exports = {
     networks: {
         hardhat: {
             // // If you want to do some forking, uncomment this
-            // forking: {
-            //   url: MAINNET_RPC_URL
-            // }
+            forking: {
+               url: MAINNET_RPC_URL
+             }
         },
         localhost: {
         },
@@ -108,6 +102,15 @@ module.exports = {
             }
         ]
     },
+    solidity: {
+        version: "0.8.7",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 1000,
+          },
+        },
+      },
     mocha: {
         timeout: 100000
     }
