@@ -1,23 +1,28 @@
-//SPDX-License-Identifier: MIT
+/** 
+<<https://github.com/FidelChe/satellite-broadband-service-chain>>
+*/
+                                                                                 
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
-
 import './Equipment.sol';
 import './Equipment_O_P.sol';
 import './Equipment_P_E.sol';
+import './APIConsumer.sol';
 
 contract ServiceChain {
 
     address public Owner;
 
-    //Initiate ServiceChain Contract
+    // Initiate ServiceChain Contract
     constructor () public {
         Owner = msg.sender;
     }
 
-/********************************************** Owner Section *********************************************/
-    //Validate Owner
+    //// OWNER ////
+
+    // Validate Owner
     modifier onlyOwner() {
         require(
             msg.sender == Owner,
@@ -35,16 +40,18 @@ contract ServiceChain {
         enduser,
         revoke
     }
-
+    // Events
     event UserRegister(address indexed cryptoAddress, bytes32 Name);
     event UserRoleRevoked(address indexed cryptoAddress, bytes32 Name, uint Role);
     event UserRoleRessigne(address indexed cryptoAddress, bytes32 Name, uint Role);
 
-    //Register New user by Owner
-    // cryptoAddress Cryptocurrency Network Address of User
-    // Name User name
-    // Location User Location
-    // Role User Role
+    /**
+    * @notice Register New user by Owner
+    * @param cryptoAddress Cryptocurrency Network Address of User
+    * @param Name User name
+    * @param Location User Location
+    * @param Role User Role
+    */
     function registerUser(
         address cryptoAddress,
         bytes32 Name,
@@ -62,21 +69,22 @@ contract ServiceChain {
         emit UserRegister(cryptoAddress, Name);
     }
     
-    //Revoke users role
+    // Revoke users role
     function revokeRole(address userAddress) public onlyOwner {
         require(UsersDetails[userAddress].role != roles.norole, "User not registered");
         emit UserRoleRevoked(userAddress, UsersDetails[userAddress].name,uint(UsersDetails[userAddress].role));
         UsersDetails[userAddress].role = roles(6);
     }
     
-    //Re-assign new role to User
+    // Re-assign new role to User
     function reassigneRole(address userAddress, uint Role) public onlyOwner {
         require(UsersDetails[userAddress].role != roles.norole, "User not registered");
         UsersDetails[userAddress].role = roles(Role);
         emit UserRoleRessigne(userAddress, UsersDetails[userAddress].name,uint(UsersDetails[userAddress].role));
     }
 
-/********************************************** User Section **********************************************/
+    //// USER ////
+
     struct UserInfo {
         bytes32 name;
         bytes32 location;
@@ -88,7 +96,7 @@ contract ServiceChain {
     
     address[] users;
     
-    //Get User Information/Profile
+    // Get User Information/Profile
     function getUserInfo(address User) public view returns(
         bytes32 name,
         bytes32 location,
@@ -102,12 +110,12 @@ contract ServiceChain {
             UsersDetails[User].role);
     }
     
-    //Get Number of registered Users
+    // Get Number of registered Users
     function getUsersCount() public view returns(uint count){
         return users.length;
     }
 
-    //Get User by Index value of stored data
+    // Get User by Index value of stored data
     // index Indexed Number
     // User Details
     function getUserbyIndex(uint index) public view returns(
@@ -118,12 +126,12 @@ contract ServiceChain {
         ) {
         return getUserInfo(users[index]);
     }
-/********************************************** Supplier Section ******************************************/
+
+    //// SUPPLIER ////
 
     mapping(address => address[]) EquipmentAtSupplier;
 
-    
-    //Update Package / Equipment batch recieved status by ethier Supplier or Operator
+    // Update Package / Equipment batch recieved status by ethier Supplier or Operator
     function  PackageReceived(
         address pid
     ) public {
@@ -136,7 +144,7 @@ contract ServiceChain {
         EquipmentAtSupplier[msg.sender].push(pid);
     }
 
-    //Get Package Count at Supplier
+    // Get Package Count at Supplier
     // Number of Packages at Supplier
     function getPackagesCountS() public view returns(uint count){
         require(
@@ -146,7 +154,7 @@ contract ServiceChain {
         return EquipmentAtSupplier[msg.sender].length;
     }
     
-    //Get PackageID by Indexed value of stored data
+    // Get PackageID by Indexed value of stored data
     function getPackageIDByIndexM(uint index) public view returns(address BatchID){
         require(
             UsersDetails[msg.sender].role == roles.supplier,
@@ -163,7 +171,7 @@ contract ServiceChain {
         address indexed Receiver
     );
 
-    //Create Equipment Batch
+    // Create Equipment Batch
     function packageEquipment(
         bytes32 Des,
         bytes32 RM,
@@ -195,7 +203,7 @@ contract ServiceChain {
         emit EquipmentNewBatch(address(m), msg.sender, Shpr, Rcvr);
     }
 
-    //Get Equipment Batch Count
+    // Get Equipment Batch Count
     function getBatchesCountS() public view returns (uint count){
         require(
             UsersDetails[msg.sender].role == roles.supplier,
@@ -204,7 +212,7 @@ contract ServiceChain {
         return EquipmentBatches[msg.sender].length;
     }
 
-    //Get Equipment BatchID by indexed value of stored data
+    // Get Equipment BatchID by indexed value of stored data
     function getBatchIdByIndexM(uint index) public view returns(address packageID) {
         require(
             UsersDetails[msg.sender].role == roles.supplier,
@@ -213,13 +221,13 @@ contract ServiceChain {
         return EquipmentBatches[msg.sender][index];
     }
 
-/********************************************** Transporter Section ******************************************/
+    //// TRANSPORTER ////
 
-    //Load Consingment fot transport one location to another.
+    // Load consingment for transport one location to another.
     function loadConsingment(
-        address pid, //Package or Batch ID
+        address pid, // Package or Batch ID
         uint transportertype,
-        address cid
+        address cid // COnsignment ID
         ) public {
         require(
             UsersDetails[msg.sender].role == roles.transporter,
@@ -239,7 +247,7 @@ contract ServiceChain {
         }
     }
 
-/********************************************** Operator Section ******************************************/
+    //// OPERATOR ////
     
     mapping(address => address[]) EquipmentBatchesAtOperator;
     
@@ -267,7 +275,7 @@ contract ServiceChain {
     mapping(address => address[]) EquipmentOtoP;
     mapping(address => address) EquipmentOtoPTxContract;
     
-    //Sub Contract for Equipment Transfer from Operator to Partner
+    // Sub Contract for Equipment Transfer from Operator to Partner
     function transferEquipmentOtoP(
         address BatchID,
         address Shipper,
@@ -288,7 +296,7 @@ contract ServiceChain {
         EquipmentOtoPTxContract[BatchID] = address(op);
     }
 
-    //Get Equipment Batch Count
+    // Get Equipment Batch Count
     function getBatchesCountOP() public view returns (uint count){
         require(
             UsersDetails[msg.sender].role == roles.operator,
@@ -297,7 +305,7 @@ contract ServiceChain {
         return EquipmentOtoP[msg.sender].length;
     }
 
-    //Get Equipment BatchID by indexed value of stored data
+    // Get Equipment BatchID by indexed value of stored data
     function getBatchIdByIndexOP(uint index) public view returns(address packageID) {
         require(
             UsersDetails[msg.sender].role == roles.operator,
@@ -306,18 +314,18 @@ contract ServiceChain {
         return EquipmentOtoP[msg.sender][index];
     }
     
-    //Get Sub Contract ID of Equipment Batch Transfer in between Operator to Partner
+    // Get Sub Contract ID of Equipment Batch Transfer in between Operator to Partner
     function getSubContractOP(address BatchID) public view returns (address SubContractOP) {
         return EquipmentOtoPTxContract[BatchID];
     }
 
-/********************************************** Partner Section ******************************************/
+    //// PARTNER ////
     
     mapping(address => address[]) EquipmentBatchAtPartner;
     mapping(address => address[]) EquipmentPtoE;
     mapping(address => address) EquipmentPtoETxContract;
     
-    //Transfer Equipment BatchID in between Partner to EndUser
+    // Transfer Equipment BatchID in between Partner to EndUser
     function transferEquipmentPtoE(
         address BatchID,
         address Shipper,
@@ -338,7 +346,7 @@ contract ServiceChain {
         EquipmentPtoETxContract[BatchID] = address(pe);
     }
     
-    //Get Equipment BatchID Count
+    // Get Equipment BatchID Count
     function getBatchesCountPE() public view returns (uint count){
         require(
             UsersDetails[msg.sender].role == roles.partner,
@@ -347,7 +355,7 @@ contract ServiceChain {
         return EquipmentPtoE[msg.sender].length;
     }
     
-    //Get Equipment BatchID by indexed value of stored data
+    // Get Equipment BatchID by indexed value of stored data
     function getBatchIdByIndexPE(uint index) public view returns(address packageID) {
         require(
             UsersDetails[msg.sender].role == roles.partner,
@@ -356,17 +364,17 @@ contract ServiceChain {
         return EquipmentPtoE[msg.sender][index];
     }
 
-    //Get SubContract ID of Equipment Batch Transfer in between Partner to EndUser
+    // Get SubContract ID of Equipment Batch Transfer in between Partner to EndUser
     function getSubContractPE(address BatchID) public view returns (address SubContractPE) {
         return EquipmentPtoETxContract[BatchID];
     }
 
-/********************************************** EndUser Section ******************************************/
+    //// END USER ////
     
     mapping(address => address[]) EquipmentBatchAtEndUser;
     mapping(address => equipmentstatus) settled;
 
-    //Equipment Batch Recieved
+    // Equipment Batch Recieved
     function EquipmentRecievedAtEndUser(
         address batchid,
         address cid
@@ -394,7 +402,7 @@ contract ServiceChain {
         uint status
     );
 
-    //Update Equipment Batch status
+    // Update Equipment Batch status
     function updateSettlementStatus(
         address BatchID,
         uint Status
@@ -410,7 +418,7 @@ contract ServiceChain {
         emit EquipmentStatus(BatchID, msg.sender, Status);
     }
 
-    //Get Equipment Batch status
+    // Get Equipment Batch status
     function settlementinfo(
         address BatchID
     ) public
@@ -421,7 +429,7 @@ contract ServiceChain {
         return uint(settled[BatchID]);
     }
 
-    //Get Equipment Batch count
+    // Get Equipment Batch count
     // Number of Batches
     function getBatchesCountE() public view returns(uint count){
         require(
@@ -431,7 +439,7 @@ contract ServiceChain {
         return  EquipmentBatchAtEndUser[msg.sender].length;
     }
 
-    //Get Equipment BatchID by indexed value of stored data
+    // Get Equipment BatchID by indexed value of stored data
     function getBatchIdByIndexE(uint index) public view returns(address BatchID){
         require(
             UsersDetails[msg.sender].role == roles.enduser,

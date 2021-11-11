@@ -1,11 +1,13 @@
-//SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
 
-/********************************************** Equipment ******************************************/
-/// @title Equipment
-/// Create a new instance of the Equipment package
+//// EQUIPMENT ////
+/** 
+    @title Equipment
+    Create a new instance of the Equipment package
+*/
 
 contract Equipment {
 
@@ -22,23 +24,17 @@ contract Equipment {
         deliveredatEndUser
     }
 
+    // Variables
     
     bytes32 description;
-    
     bytes32 equipment;
-    
     uint quantity;
-    
     address shipper;
-    
     address supplier;
-    
     address operator;
-    
     address partner;
-    
     address enduser;
-    
+
     equipmentStatus status;
 
     event ShippmentUpdate(
@@ -49,15 +45,16 @@ contract Equipment {
         uint Status
     );
 
-    
-    //Create new Equipment Batch by Supplier
-    // Supp Supplier Cryptocurrency Network Address
-    // Des Description of Equipment Batch
-    // EM for Equipment
-    // Quant Number of units
-    // Shpr Transporter Cryptocurrency Network Address
-    // Rcvr Receiver Cryptocurrency Network Address
-    // RcvrType Receiver Type either Operator(1) or Partner(2)
+    /**
+     * @notice Create new Equipment Batch by Supplier
+     * @param Supp Supplier Cryptocurrency Network Address
+     * @param Des Description of Equipment Batch
+     * @param EM for Equipment
+     * @param Quant Number of units
+     * @param Shpr Transporter Cryptocurrency Network Address
+     * @param Rcvr Receiver Cryptocurrency Network Address
+     * @param RcvrType Receiver Type either Operator(1) or Partner(2)
+    */
     constructor(
         address Supp,
         bytes32 Des,
@@ -80,8 +77,7 @@ contract Equipment {
         }
     }
 
-    
-    //Get Equipment Batch basic Details
+    // Get Equipment Batch basic Details
     // Equipment Batch Details
     function getEquipmentInfo () public view returns(
         address Supp,
@@ -99,8 +95,7 @@ contract Equipment {
         );
     }
 
-    
-    //Get address Operator, Partner and EndUser
+    // Get address Operator, Partner and EndUser
     // Address Array
     function getOPE() public view returns(
         address[3] memory OPE
@@ -110,8 +105,7 @@ contract Equipment {
         );
     }
 
-    
-    //Get Equipment Batch Transaction Status
+    // Get Equipment Batch Transaction Status
     // Equipment Transaction Status
     function getBatchIDStatus() public view returns(
         uint
@@ -119,8 +113,7 @@ contract Equipment {
         return uint(status);
     }
 
-    
-    //Pick Equipment Batch by Associate Transporter
+    // Pick Equipment Batch by Associate Transporter
     // shpr Transporter Cryptocurrency Network Address
     function pickPackage(
         address shpr
@@ -144,7 +137,7 @@ contract Equipment {
     }
 
     
-    //Received Equipment Batch by Associated Operator or Partner
+    // Received Equipment Batch by Associated Operator or Partner
     // Rcvr Operator or Partner
     function receivedPackage(
         address Rcvr
@@ -172,9 +165,8 @@ contract Equipment {
             return 2;
         }
     }
-
     
-    //Update Equipment Batch transaction Status(Pick) in between Operator and Partner
+    // Update Equipment Batch transaction Status(Pick) in between Operator and Partner
     // receiver Partner Cryptocurrency Network Address
     // sender Operator Cryptocurrency Network Address
     function sendOP(
@@ -189,8 +181,7 @@ contract Equipment {
         status = equipmentStatus(2);
     }
 
-    
-    //Update Equipment Batch transaction Status(Recieved) in between Operator and Partner
+    // Update Equipment Batch transaction Status(Recieved) in between Operator and Partner
     // receiver Partner
     function recievedOP(
         address receiver
@@ -202,8 +193,7 @@ contract Equipment {
         status = equipmentStatus(4);
     }
 
-    
-    //Update Equipment Batch transaction Status(Pick) in between Partner and EndUser
+    // Update Equipment Batch transaction Status(Pick) in between Partner and EndUser
     // receiver EndUser Cryptocurrency Network Address
     // sender Partner Cryptocurrency Network Address
     function sendPE(
@@ -217,9 +207,8 @@ contract Equipment {
         enduser = receiver;
         status = equipmentStatus(5);
     }
-
     
-    //Update Equipment Batch transaction Status(Recieved) in between Partner and EndUser
+    // Update Equipment Batch transaction Status(Recieved) in between Partner and EndUser
     // receiver EndUser Cryptocurrency Network Address
     function recievedPE(
         address receiver

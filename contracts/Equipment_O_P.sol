@@ -4,33 +4,32 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 import './Equipment.sol';
 
-/********************************************** Equipment_O_P ******************************************/
-/// @title Equipment_O_P
-// Sub Contract for Equipment Transaction between Operator and Partner
+//// EQUIPMENT_O_P ////
+/** @title Equipment_O_P
+    Sub Contract for Equipment Transaction between Operator and Partner
+*/
 
 contract Equipment_O_P {
     
     address Owner;
 
     enum packageStatus { atcreator, picked, delivered }
-
     
     address batchid;
-    
     address sender;
-    
     address shipper;
-    
     address receiver;
-    
+
     packageStatus status;
 
-    
-    // Create SubContract for Equipment Transaction
-    // BatchID Equipment BatchID
-    // Sender Operator Cryptocurrency Network Address
-    // Shipper Transporter Cryptocurrency Network Address
-    // Receiver Partner Cryptocurrency Network Address
+    /** 
+    * @notice Create SubContract for Equipment Transaction
+    * @param BatchID Equipment BatchID
+    * @param Sender Operator Cryptocurrency Network Address
+    * @param Shipper Transporter Cryptocurrency Network Address
+    * @param Receiver Partner Cryptocurrency Network Address
+    */
+
     constructor(
         address BatchID,
         address Sender,
@@ -46,7 +45,6 @@ contract Equipment_O_P {
 
     }
 
-    
     // Pick Equipment Batch by Associated Transporter
     // BatchID Equipment BatchID
     // Shipper Transporter Cryptocurrency Network Address
@@ -65,7 +63,6 @@ contract Equipment_O_P {
             sender
         );
     }
-
     
     // Recieved Equipment Batch by Associate Partner
     // BatchID Equipment BatchID
@@ -85,14 +82,10 @@ contract Equipment_O_P {
         );
     }
 
-    
     // Get Equipment Batch Transaction status in between Operator and Partner
     // Transaction status
-    function getBatchIDStatus() public view returns(
-        uint
-    ) {
+    function getBatchIDStatus() public view returns(uint) {
         return uint(status);
     }
-
 }
     

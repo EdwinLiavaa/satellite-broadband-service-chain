@@ -3,9 +3,10 @@ pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
 
-/********************************************** Solution ******************************************/
-/// @title Solution
-/// @dev Create a new instance of a Solution
+//// SOLUTION_O_P ////
+/** @title Solution
+  * @dev Create a new instance of a Solution
+*/
 
 contract Solution {
     

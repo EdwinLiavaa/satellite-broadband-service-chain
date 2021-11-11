@@ -3,9 +3,10 @@ pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
 
-/********************************************** Solution_P_E ******************************************/
-/// @title Solution
-/// @dev Sub Contract for Solution Transaction between Partner and EndUser
+//// SOLUTION_P_E ////
+/** @title Solution_P_E
+  * @dev Sub Contract for Solution Transaction between Partner and EndUser
+*/
 
 contract Solution_P_E {
     

@@ -4,10 +4,10 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 import './Equipment.sol';
 
-/********************************************** Equipment_P_E ******************************************/
-/// @title Equipment_P_E
-
-//Sub Contract for Equipment Transaction between Partner and EndUser
+//// EQUIPMENT_P_E ////
+/** @title Equipment_P_E
+    Sub Contract for Equipment Transaction between Partner and EndUser
+*/
 
 contract Equipment_P_E {
     
@@ -15,23 +15,20 @@ contract Equipment_P_E {
 
     enum packageStatus { atcreator, picked, delivered }
 
-    
     address batchid;
-    
     address sender;
-    
     address shipper;
-    
     address receiver;
     
     packageStatus status;
 
-    
-    //Create SubContract for Equipment Transaction
-    // BatchID Equipment BatchID
-    // Sender Partner Cryptocurrency Network Address
-    // Shipper Transporter Cryptocurrency Network Address
-    // Receiver EndUser Cryptocurrency Network Address
+    /** 
+    * @notice Create SubContract for Equipment Transaction
+    * @param BatchID Equipment BatchID
+    * @param Sender Partner Cryptocurrency Network Address
+    * @param Shipper Transporter Cryptocurrency Network Address
+    * @param Receiver EndUser Cryptocurrency Network Address
+    */
     constructor(
         address BatchID,
         address Sender,
@@ -44,11 +41,9 @@ contract Equipment_P_E {
         shipper = Shipper;
         receiver = Receiver;
         status = packageStatus(0);
-
     }
 
-    
-    //Pick Equipment Batch by Associated Transporter
+    // Pick Equipment Batch by Associated Transporter
     // BatchID Equipment BatchID
     // Shipper Transporter Cryptocurrency Network Address
     function pickPE(
@@ -67,8 +62,7 @@ contract Equipment_P_E {
         );
     }
 
-    
-    //Recieved Equipment Batch by Associate EndUser
+    // Recieved Equipment Batch by Associate EndUser
     // BatchID Equipment BatchID
     // Receiver EndUser Cryptocurrency Network Address
     function recievePE(
@@ -86,8 +80,7 @@ contract Equipment_P_E {
         );
     }
 
-    
-    //Get Equipment Batch Transaction status in between Operator and Partner
+    // Get Equipment Batch Transaction status in between Operator and Partner
     // Transaction status
     function getBatchIDStatus() public view returns(
         uint
