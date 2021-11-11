@@ -17,7 +17,7 @@ module.exports = async ({
 
     // ethers is avaialble in the global scope
     const [deployer] = await ethers.getSigners();
-    console.log("Deploying the contracts with the account:",
+    console.log("Deploying the contract with the account:",
     await deployer.getAddress()
   );
 
@@ -27,9 +27,9 @@ module.exports = async ({
     //const { deployer } = await getNamedAccounts()
     const chainId = await getChainId()
 
-    const SupplyChain = await ethers.getContractFactory("SupplyChain");
-    const deployedContract = await SupplyChain.deploy();
-    console.log("Deployed SupplyChain contract address:", deployedContract.address);
+    const ServiceChain = await ethers.getContractFactory("ServiceChain");
+    const deployedContract = await ServiceChain.deploy();
+    console.log("Deployed ServiceChain contract address:", deployedContract.address);
 
     // We also save the contract's artifacts and address in the frontend directory
     saveFrontendFiles(deployedContract);
@@ -45,13 +45,13 @@ module.exports = async ({
   
     fs.writeFileSync(
       contractsDir + "/contract-address.json",
-      JSON.stringify({ SupplyChain: deployedContract.address }, undefined, 2)
+      JSON.stringify({ ServiceChain: deployedContract.address }, undefined, 2)
     );
   
-    const SupplyChainArtifact = artifacts.readArtifactSync("SupplyChain");
+    const SupplyChainArtifact = artifacts.readArtifactSync("ServiceChain");
   
     fs.writeFileSync(
-      contractsDir + "/SupplyChain.json",
+      contractsDir + "/ServiceChain.json",
       JSON.stringify(SupplyChainArtifact, null, 2)
     );
   }

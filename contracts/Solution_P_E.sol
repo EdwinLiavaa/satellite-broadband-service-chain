@@ -3,11 +3,11 @@ pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
 
-/********************************************** Bandwidth_P_E ******************************************/
-/// @title Bandwidth
-/// @dev Sub Contract for Bandwidth Transaction between Partner and EndUser
+/********************************************** Solution_P_E ******************************************/
+/// @title Solution
+/// @dev Sub Contract for Solution Transaction between Partner and EndUser
 
-contract Bandwidth {
+contract Solution_P_E {
     
     string version;
 

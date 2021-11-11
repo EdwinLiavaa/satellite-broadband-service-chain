@@ -8,5 +8,11 @@ import "hardhat/console.sol";
 /// @dev Sub Contract for Bandwidth Transaction between Operator and Partner
 
 contract Bandwidth {
+    
+    string version;
 
+    constructor(string memory _version) public {
+	    console.log("Coming soon in version 2.0:", _version);
+	    version = _version;
+    }
 }

@@ -6,7 +6,6 @@ import './Equipment.sol';
 
 /********************************************** Equipment_O_P ******************************************/
 /// @title Equipment_O_P
-
 // Sub Contract for Equipment Transaction between Operator and Partner
 
 contract Equipment_O_P {

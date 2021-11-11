@@ -7,11 +7,11 @@ import './Equipment.sol';
 import './Equipment_O_P.sol';
 import './Equipment_P_E.sol';
 
-contract SupplyChain {
+contract ServiceChain {
 
     address public Owner;
 
-    //Initiate SupplyChain Contract
+    //Initiate ServiceChain Contract
     constructor () public {
         Owner = msg.sender;
     }

@@ -5,8 +5,7 @@ import "hardhat/console.sol";
 
 /********************************************** Equipment ******************************************/
 /// @title Equipment
-
-//Create a new instance of the Equipment package
+/// Create a new instance of the Equipment package
 
 contract Equipment {
 
