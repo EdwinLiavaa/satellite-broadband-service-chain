@@ -47,7 +47,7 @@ In summary, this project will benefit all stakeholders with empowerment of crypt
 3. **Shipper** - responsible for shipping Service batches from Supplier to Operator, from Operator to Partner and from Partner to EndUser.
 4. **Operator** - responsible for odering equipment batches from Supplier, process requests for both equipment hand bandwidth from Partner, update equipment details, quantity, validate quality and invoicing Partner.
 5. **Partner** - reponsible for both equipment and bandwidth distribution, installations, activations and revenue collection from EndUser. 
-6. **EndUser** - reponsible for equipment safety, varification of equipment condition, validation of bandwidth quality and pay bandwidth subscription to Partner. 
+6. **EndUser** - reponsible for equipment safety, varification of equipment condition, validation of bandwidth quality and bandwidth subscription to Partner. 
 
 #### Application Workflow Diagram
 ---
