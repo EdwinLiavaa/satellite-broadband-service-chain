@@ -51,7 +51,7 @@ In summary, this project will benefit all stakeholders with empowerment of crypt
 
 #### Application Workflow Diagram
 ---
-![](https://github.com/FidelChe/satellite-broadband-service-chain/blob/master/workflow/WorkFlow.png)
+![](https://github.com/FidelChe/satellite-broadband-service-chain/blob/main/workflow/Workflow.png)
 
 #### Tools and Technologies
 ---
