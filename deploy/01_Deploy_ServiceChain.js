@@ -37,7 +37,7 @@ module.exports = async ({
   
   function saveFrontendFiles(deployedContract) {
     const fs = require("fs");
-    const contractsDir = "/home/fidelche/satellite-broadband-supply-chain-ui/src/contracts";
+    const contractsDir = "/home/fidelche/satellite-broadband-service-chain-ui/src/contracts";
   
     if (!fs.existsSync(contractsDir)) {
       fs.mkdirSync(contractsDir);
@@ -48,10 +48,10 @@ module.exports = async ({
       JSON.stringify({ ServiceChain: deployedContract.address }, undefined, 2)
     );
   
-    const SupplyChainArtifact = artifacts.readArtifactSync("ServiceChain");
+    const ServiceChainArtifact = artifacts.readArtifactSync("ServiceChain");
   
     fs.writeFileSync(
       contractsDir + "/ServiceChain.json",
-      JSON.stringify(SupplyChainArtifact, null, 2)
+      JSON.stringify(ServiceChainArtifact, null, 2)
     );
   }
