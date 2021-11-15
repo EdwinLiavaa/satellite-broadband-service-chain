@@ -19,11 +19,7 @@ The Satellite Broadband Service Chain is the sequence of activities and processe
 In summary, this project will benefit all stakeholders with the empowerment of cryptographic truth to ensure definitive truth in providing connectivity to the underserved communities by bridging the geographical boundaries thus aliviating the digital divide and leaving no one behind.
 
 ## Components
-<<<<<<< HEAD
 - Smart Contracts - Hardhat/Solidity (https://github.com/FidelChe/satellite-broadband-service-chain)
-=======
-- Smart Contracts - Solidity/Hardhat (https://github.com/FidelChe/satellite-broadband-service-chain)
->>>>>>> 606420c9bf792f2f7ad9e69e40f73343893538d7
 - Front-end - Moralis/React (https://github.com/FidelChe/satellite-broadband-service-chain-ui)
 - External Adapter - Google Cloud (https://github.com/FidelChe/marine-traffic-external-adapter)
 - Chainlink Node - Google Cloud (https://github.com/FidelChe/chainlink-gcp)
