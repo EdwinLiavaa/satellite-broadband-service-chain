@@ -20,7 +20,7 @@ In summary, this project will benefit all stakeholders with empowerment of crypt
 
 ## Components
 - Smart Contracts - Hardhat (https://github.com/FidelChe/satellite-broadband-service-chain)
-- Front-end - Moralis/React
+- Front-end - Moralis/React(https://github.com/FidelChe/satellite-broadband-service-chain-ui)
 - External Adapter - Google Cloud (https://github.com/FidelChe/marine-traffic-external-adapter)
 - Chainlink Node - Google Cloud (https://github.com/FidelChe/chainlink-gcp)
 
