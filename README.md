@@ -4,7 +4,7 @@
 
 This project was inspired by the vision:
 
-* Serving the underserved people in remote islands communities with internet connectivity by leaving no one behind.
+* Connectivity for the underserved people in remote communities with cryptographic truth and leaving no one behind.
 
 ## What it does
 
