@@ -8,7 +8,7 @@ This project was inspired by the vision:
 
 ## What it does
 
-It is a proof-of-concept to automate all manual processes in the Satellite Broadband Service Chain by replacing paper contracts with hybrid smart contracts across synergies from suppliers/vendors, finance, sales, logistics with assets tracking to both partners and end users.
+It is a proof-of-concept for automating manual processes in the Satellite Broadband Service by replacing paper contracts with hybrid smart contracts across synergies from suppliers/vendors, finance, sales, logistics with assets tracking to both partners and end users.
 
 Moreover, this project in itself is a DeFi payment gateway for the remote Pacific Islands communities and also bridge the gap in the digital divide that is not provided by the existing banking infrastructure.
 
