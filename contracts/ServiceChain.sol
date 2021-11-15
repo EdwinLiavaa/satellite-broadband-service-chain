@@ -3,6 +3,8 @@
 */
                                                                                  
 // SPDX-License-Identifier: MIT
+// Solidity code base and design adopted from work done by Kamal Kishor Mehra Blockchain : Pharmaceutical SupplyChain
+
 pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
