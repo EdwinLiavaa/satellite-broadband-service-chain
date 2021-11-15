@@ -1,40 +1,57 @@
 let { networkConfig } = require('../helper-hardhat-config')
 
 module.exports = async ({
-  getNamedAccounts,
-  deployments
-}) => {
-  const { deploy, log, get } = deployments
-  const { deployer } = await getNamedAccounts()
-  const chainId = await getChainId()
-  let linkTokenAddress
-  let oracle
-  let additionalMessage = ""
-  //set log level to ignore non errors
-  ethers.utils.Logger.setLogLevel(ethers.utils.Logger.levels.ERROR)
+    getNamedAccounts,
+    deployments,
+    getChainId
+})=> {
 
-  if (chainId == 31337) {
-    let linkToken = await get('LinkToken')
-    let MockOracle = await get('MockOracle')
-    linkTokenAddress = linkToken.address
-    oracle = MockOracle.address
-    additionalMessage = " --linkaddress " + linkTokenAddress
-  } else {
-    linkTokenAddress = networkConfig[chainId]['linkToken']
-    oracle = networkConfig[chainId]['oracle']
+    // This is just a convenience check
+    if (network.name === "hardhat") {
+      console.warn(
+        "You are trying to deploy a contract to the Hardhat Network, which" +
+          " gets automatically created and destroyed every time. Use the Hardhat" +
+          " option '--network localhost'"
+      );
+    }
+
+    // ethers is avaialble in the global scope
+    const [deployer] = await ethers.getSigners();
+    console.log("Deploying the contract with the account:",
+    await deployer.getAddress()
+  );
+
+  console.log("Account balance:", (await deployer.getBalance()).toString());
+
+    const { deploy, log } = deployments
+    //const { deployer } = await getNamedAccounts()
+    const chainId = await getChainId()
+
+    const APIConsumer = await ethers.getContractFactory("APIConsumer");
+    const deployedContract = await APIConsumer.deploy();
+    console.log("Deployed APIConsumer contract address:", deployedContract.address);
+
+    // We also save the contract's artifacts and address in the frontend directory
+    saveFrontendFiles(deployedContract);
   }
-  const jobId = networkConfig[chainId]['jobId']
-  const fee = networkConfig[chainId]['fee']
-  const networkName = networkConfig[chainId]['name']
-
-  const apiConsumer = await deploy('APIConsumer', {
-    from: deployer,
-    args: [oracle, jobId, fee, linkTokenAddress],
-    log: true
-  })
-
-  log("Run API Consumer contract with following command:")
-  log("npx hardhat request-data --contract " + apiConsumer.address + " --network " + networkName)
-  log("----------------------------------------------------")
-}
-module.exports.tags = ['all', 'api', 'main']
+  
+  function saveFrontendFiles(deployedContract) {
+    const fs = require("fs");
+    const contractsDir = "/home/fidelche/satellite-broadband-service-chain-ui/src/contracts";
+  
+    if (!fs.existsSync(contractsDir)) {
+      fs.mkdirSync(contractsDir);
+    }
+  
+    fs.writeFileSync(
+      contractsDir + "/contract-address.json",
+      JSON.stringify({ APIConsumer: deployedContract.address }, undefined, 2)
+    );
+  
+    const APIConsumerArtifact = artifacts.readArtifactSync("APIConsumer");
+  
+    fs.writeFileSync(
+      contractsDir + "/APIConsumer.json",
+      JSON.stringify(APIConsumerArtifact, null, 2)
+    );
+  }
