@@ -86,7 +86,3 @@ In summary, this project will benefit all stakeholders with empowerment of crypt
 - ethereum-waffle ^3.4.0
 - ethers 5.4.7
 - hardhat 2.6.4
-
-#### Contract Deployment Steps:
----
-**Setting up Ethereum Smart Contract:**
