@@ -44,7 +44,7 @@ module.exports = async ({
     }
   
     fs.writeFileSync(
-      contractsDir + "/contract-address.json",
+      contractsDir + "/APIConsumer-contract-address.json",
       JSON.stringify({ APIConsumer: deployedContract.address }, undefined, 2)
     );
   

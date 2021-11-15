@@ -44,7 +44,7 @@ module.exports = async ({
     }
   
     fs.writeFileSync(
-      contractsDir + "/contract-address.json",
+      contractsDir + "/ServiceChain-contract-address.json",
       JSON.stringify({ ServiceChain: deployedContract.address }, undefined, 2)
     );
   
