@@ -4,7 +4,7 @@
 
 This project was inspired by the vision:
 
-* Serving the underserved people in remote islands communities with internet connectivity by leaving no one behind.
+  * Connectivity for the underserved people in remote communities with cryptographic truth and leaving no one behind.
 
 ## What it does
 
@@ -61,11 +61,14 @@ In summary, this project will benefit all stakeholders with empowerment of crypt
 
 #### Tools and Technologies
 ---
-- Solidity  
+- Alchemy
 - Chainlink
+- Google Cloud
 - Hardhat
-- Metamask 
 - Kovan test network 
+- Metamask
+- Moralis 
+- Solidity 
 - Web3JS
 
 #### Prerequisites
@@ -86,7 +89,3 @@ In summary, this project will benefit all stakeholders with empowerment of crypt
 - ethereum-waffle ^3.4.0
 - ethers 5.4.7
 - hardhat 2.6.4
-
-#### Contract Deployment Steps:
----
-**Setting up Ethereum Smart Contract:**
