@@ -4,7 +4,11 @@
 
 This project was inspired by the vision:
 
+<<<<<<< HEAD
   * Connectivity for the underserved people in remote communities with cryptographic truth and leaving no one behind.
+=======
+* Connectivity for the underserved people in remote communities with cryptographic truth and leaving no one behind.
+>>>>>>> e11d9a2f7cc5c481911c61a0b6f6a630292316ce
 
 ## What it does
 
