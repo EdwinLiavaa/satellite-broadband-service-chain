@@ -4,7 +4,7 @@
 
 This project was inspired by the vision:
 
-  * Providing satellite broadband connectivity to the underserved people in remote communities with cryptographic truth by leaving no one behind.
+  * Providing satellite broadband connectivity to the underserved remote communities with cryptographic truth.
 
 ## What it does
 
@@ -16,11 +16,11 @@ It demonstrates the journey of solutions in both equipment and bandwidth on bloc
 
 The Satellite Broadband Service Chain is the sequence of activities and processes involved in shipping equipment from suppliers/vendors to the broadband satellite operator. The satellite operator then package them together with broadband solutions to serve telecommunications operators, internet service providers, governments, other service providers and end users.
 
-In summary, this project will benefit all stakeholders with empowerment of cryptographic truth to ensure definitive truth in providing connectivity to the underserved communities by bridging both the digital divide and the geographical boundaries.
+In summary, this project will benefit all stakeholders with the empowerment of cryptographic truth to ensure definitive truth in providing connectivity to the underserved communities by bridging the geographical boundaries thus aliviating the digital divide and leaving no one behind.
 
 ## Components
-- Smart Contracts - Hardhat (https://github.com/FidelChe/satellite-broadband-service-chain)
-- Front-end - Moralis/React
+- Smart Contracts - Hardhat/Solidity (https://github.com/FidelChe/satellite-broadband-service-chain)
+- Front-end - Moralis/React (https://github.com/FidelChe/satellite-broadband-service-chain-ui)
 - External Adapter - Google Cloud (https://github.com/FidelChe/marine-traffic-external-adapter)
 - Chainlink Node - Google Cloud (https://github.com/FidelChe/chainlink-gcp)
 

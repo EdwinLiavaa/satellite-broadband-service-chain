@@ -13,7 +13,7 @@ task("read-data", "Calls an API Consumer Contract to read data obtained from an 
 
         //Create connection to API Consumer Contract and call the createRequestTo function
         const apiConsumerContract = new ethers.Contract(contractAddr, APIConsumer.interface, signer)
-        let result = BigInt(await apiConsumerContract.volume()).toString()
+        let result = BigInt(await apiConsumerContract.location()).toString()
         console.log('Data is: ', result)
         if (result == 0 && ['hardhat', 'localhost', 'ganache'].indexOf(network.name) == 0) {
             console.log("You'll either need to wait another minute, or fix something!")
