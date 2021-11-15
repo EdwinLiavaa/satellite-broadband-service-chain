@@ -18,6 +18,12 @@ The Satellite Broadband Service Chain is the sequence of activities and processe
 
 In summary, this project will benefit all stakeholders with empowerment of cryptographic truth to ensure definitive truth in providing connectivity to the underserved communities by bridging both the digital divide and the geographical boundaries.
 
+## Components
+- Smart Contracts - Hardhat (https://github.com/FidelChe/satellite-broadband-service-chain)
+- Front-end - Moralis/React
+- External Adapter - Google Cloud (https://github.com/FidelChe/marine-traffic-external-adapter)
+- Chainlink Node - Google Cloud (https://github.com/FidelChe/chainlink-gcp)
+
 #### Problems in Existing System
 ---
 - Shipment visibility
@@ -44,14 +50,14 @@ In summary, this project will benefit all stakeholders with empowerment of crypt
 ---
 1. **Admin** - new users registrations, assign access rights according to their roles.
 2. **Supplier** - Service equipment, create new batch for purchase order details from Operator.  
-3. **Shipper** - responsible for shipping Service batches from Supplier to Operator, from Operator to Partner and from Partner to EndUser.
+3. **Transporter** - responsible for shipping Service batches from Supplier to Operator, from Operator to Partner and from Partner to EndUser.
 4. **Operator** - responsible for odering equipment batches from Supplier, process requests for both equipment hand bandwidth from Partner, update equipment details, quantity, validate quality and invoicing Partner.
 5. **Partner** - reponsible for both equipment and bandwidth distribution, installations, activations and revenue collection from EndUser. 
 6. **EndUser** - reponsible for equipment safety, varification of equipment condition, validation of bandwidth quality and pay bandwidth subscription to Partner. 
 
 #### Application Workflow Diagram
 ---
-![](https://github.com/FidelChe/satellite-broadband-service-chain/blob/master/workflow/Satellite%20Broadband%20Service-Chain%20Class%20Workflow.png)
+![](https://github.com/FidelChe/satellite-broadband-service-chain/blob/main/workflow/Workflow.png)
 
 #### Tools and Technologies
 ---
