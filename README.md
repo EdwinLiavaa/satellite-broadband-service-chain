@@ -4,7 +4,7 @@
 
 This project was inspired by the vision:
 
-  * Connectivity for the underserved people in remote communities with cryptographic truth and leaving no one behind.
+  * Providing satellite broadband connectivity to the underserved people in remote communities with cryptographic truth by leaving no one behind.
 
 ## What it does
 
