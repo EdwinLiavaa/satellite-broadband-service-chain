@@ -31,7 +31,7 @@ In summary, this project will benefit all stakeholders with the empowerment of c
 - Slow process and error prone paper contracts
 - Delays in coordination
 - Overdue invoices and payment issues
-- Lack of payment gateways
+- Lack of payment gateways for underserved communities
 
 #### What Blockchain and Chainlink are providing
 ---
