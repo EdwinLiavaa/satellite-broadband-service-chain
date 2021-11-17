@@ -37,7 +37,7 @@ module.exports = async ({
   
   function saveFrontendFiles(deployedContract) {
     const fs = require("fs");
-    const contractsDir = "/home/fidelche/satellite-broadband-service-chain-ui/src/contracts";
+    const contractsDir = "../satellite-broadband-service-chain-ui/src/contracts";
   
     if (!fs.existsSync(contractsDir)) {
       fs.mkdirSync(contractsDir);
