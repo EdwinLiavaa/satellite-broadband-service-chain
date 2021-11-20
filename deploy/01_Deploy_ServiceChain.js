@@ -24,7 +24,7 @@ module.exports = async ({
   console.log("Account balance:", (await deployer.getBalance()).toString());
 
     const { deploy, log } = deployments
-    //const { deployer } = await getNamedAccounts()
+    const { _deployer } = await getNamedAccounts()
     const chainId = await getChainId()
 
     const ServiceChain = await ethers.getContractFactory("ServiceChain");
@@ -38,14 +38,24 @@ module.exports = async ({
   function saveFrontendFiles(deployedContract) {
     const fs = require("fs");
     const contractsDir = "../satellite-broadband-service-chain-ui/src/contracts";
+    const chaininfoDir = "../satellite-broadband-service-chain-ui/src/chain-info";
   
     if (!fs.existsSync(contractsDir)) {
       fs.mkdirSync(contractsDir);
     }
+
+    if (!fs.existsSync(chaininfoDir)) {
+      fs.mkdirSync(chaininfoDir);
+    }
   
     fs.writeFileSync(
-      contractsDir + "/ServiceChain-contract-address.json",
+      chaininfoDir + "/ServiceChain-contract-address.json",
       JSON.stringify({ ServiceChain: deployedContract.address }, undefined, 2)
+    );
+
+    fs.writeFileSync(
+      chaininfoDir + "/ServiceChain-chainId.json",
+      JSON.stringify({ ServiceChain: getChainId() }, undefined, 2)
     );
   
     const ServiceChainArtifact = artifacts.readArtifactSync("ServiceChain");

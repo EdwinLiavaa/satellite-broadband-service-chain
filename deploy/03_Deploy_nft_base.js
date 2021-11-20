@@ -27,9 +27,9 @@ module.exports = async ({
     const { _deployer } = await getNamedAccounts()
     const chainId = await getChainId()
 
-    const APIConsumer = await ethers.getContractFactory("APIConsumer");
-    const deployedContract = await APIConsumer.deploy();
-    console.log("Deployed APIConsumer contract address:", deployedContract.address);
+    const MyNFT = await ethers.getContractFactory("MyNFT");
+    const deployedContract = await MyNFT.deploy();
+    console.log("Deployed MyNFT contract address:", deployedContract.address);
 
     // We also save the contract's artifacts and address in the frontend directory
     saveFrontendFiles(deployedContract);
@@ -45,23 +45,23 @@ module.exports = async ({
     }
 
     if (!fs.existsSync(chaininfoDir)) {
-      fs.mkdirSync(chaininfoDir);
-    }
+        fs.mkdirSync(chaininfoDir);
+      }
   
     fs.writeFileSync(
-      chaininfoDir + "/APIConsumer-contract-address.json",
-      JSON.stringify({ APIConsumer: deployedContract.address }, undefined, 2)
+        chaininfoDir + "/MyNFT-contract-address.json",
+      JSON.stringify({ MyNFT: deployedContract.address }, undefined, 2)
     );
 
     fs.writeFileSync(
-      chaininfoDir + "/APIConsumer-chainId.json",
-      JSON.stringify({ APIConsumer: getChainId() }, undefined, 2)
-    );
+        chaininfoDir + "/MyNFT-chainId.json",
+        JSON.stringify({ MyNFT: getChainId() }, undefined, 2)
+      );
   
-    const APIConsumerArtifact = artifacts.readArtifactSync("APIConsumer");
+    const MyNFTArtifact = artifacts.readArtifactSync("MyNFT");
   
     fs.writeFileSync(
-      contractsDir + "/APIConsumer.json",
-      JSON.stringify(APIConsumerArtifact, null, 2)
+      contractsDir + "/MyNFT.json",
+      JSON.stringify(MyNFTArtifact, null, 2)
     );
   }
