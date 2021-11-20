@@ -17,7 +17,7 @@ contract APIConsumer is ChainlinkClient {
 
 
     constructor() {
-        setPublicChainlinkToken();
+        //setPublicChainlinkToken();
         oracle = 0xB37424e282D7EE4AbDF43B7cC9f81D5f81539ccf;
         jobId = "85d1c04c4bad429ab247fe503d0175cd";
         fee = 0.1 * 10 ** 18; // 0.1 LINK
