@@ -37,8 +37,8 @@ module.exports = async ({
   
   function saveFrontendFiles(deployedContract) {
     const fs = require("fs");
-    const contractsDir = "../satellite-broadband-service-chain-ui/src/contracts";
-    const chaininfoDir = "../satellite-broadband-service-chain-ui/src/chain-info";
+    const contractsDir = "../satellite-broadband-service-chain-ui/contract_base/contracts";
+    const chaininfoDir = "../satellite-broadband-service-chain-ui/contract_base/chain-info";
   
     if (!fs.existsSync(contractsDir)) {
       fs.mkdirSync(contractsDir);
