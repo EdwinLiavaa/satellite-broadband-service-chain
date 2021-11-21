@@ -6,7 +6,7 @@ This project was inspired by the vision:
 
   * Providing connectivity to the underserved remote communities with satellite broadband using cryptographic truth.
   
-  * I belive the future of signing up and serving the underserved communities with telco broadband service will be in the form of dynamic NFTs.
+  * I believe the future of signing up and serving the underserved communities with telco broadband service will be in the form of dynamic NFTs.
 
 ## What it does
 
