@@ -5,10 +5,10 @@
 This project was inspired by the vision:
 
   * Providing connectivity to the underserved remote communities with satellite broadband using cryptographic truth.
-  
-  * I believe the future of signing up and serving the underserved communities with telco broadband service will be in the form of dynamic NFTs.
 
 ## What it does
+
+I believe the future of signing up and serving the underserved communities with telco broadband service will be in the form of dynamic NFTs.
 
 It is a futuristic approach proof-of-concept for automating manual processes in the Satellite Broadband Service by replacing paper contracts with hybrid smart contracts across synergies from suppliers/vendors, finance, sales, logistics with assets tracking to both partners and end users.
 
