@@ -53,10 +53,10 @@ module.exports = async ({
       JSON.stringify({ ServiceChain: deployedContract.address }, undefined, 2)
     );
 
-    fs.writeFileSync(
-      chaininfoDir + "/ServiceChain-chainId.json",
-      JSON.stringify({ ServiceChain: getChainId() }, undefined, 2)
-    );
+    //fs.writeFileSync(
+      //chaininfoDir + "/ServiceChain-chainId.json",
+      //JSON.stringify({ ServiceChain: getChainId() }, undefined, 2)
+    //);
   
     const ServiceChainArtifact = artifacts.readArtifactSync("ServiceChain");
   

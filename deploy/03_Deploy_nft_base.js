@@ -53,10 +53,10 @@ module.exports = async ({
       JSON.stringify({ MyNFT: deployedContract.address }, undefined, 2)
     );
 
-    fs.writeFileSync(
-        chaininfoDir + "/MyNFT-chainId.json",
-        JSON.stringify({ MyNFT: getChainId() }, undefined, 2)
-      );
+    //fs.writeFileSync(
+        //chaininfoDir + "/MyNFT-chainId.json",
+        //JSON.stringify({ MyNFT: getChainId() }, undefined, 2)
+     // );
   
     const MyNFTArtifact = artifacts.readArtifactSync("MyNFT");
   

@@ -53,10 +53,10 @@ module.exports = async ({
       JSON.stringify({ APIConsumer: deployedContract.address }, undefined, 2)
     );
 
-    fs.writeFileSync(
-      chaininfoDir + "/APIConsumer-chainId.json",
-      JSON.stringify({ APIConsumer: getChainId() }, undefined, 2)
-    );
+    //fs.writeFileSync(
+      //chaininfoDir + "/APIConsumer-chainId.json",
+      //JSON.stringify({ APIConsumer: getChainId() }, undefined, 2)
+    //);
   
     const APIConsumerArtifact = artifacts.readArtifactSync("APIConsumer");
   
