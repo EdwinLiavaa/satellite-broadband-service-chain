@@ -22,7 +22,7 @@ In summary, this project will benefit all stakeholders with the empowerment of c
 - Smart Contracts - Hardhat/Solidity (https://github.com/FidelChe/satellite-broadband-service-chain)
 - Front-end - Moralis/React (https://github.com/FidelChe/satellite-broadband-service-chain-ui)
 - External Adapter - Google Cloud (https://github.com/FidelChe/marine-traffic-external-adapter)
-- Chainlink Node - Google Cloud (https://github.com/FidelChe/chainlink-gcp)
+- Chainlink Node - Google Cloud (https://github.com/FidelChe/marine-traffic-chainlink-node)
 
 #### Problems in Existing System
 ---
@@ -64,27 +64,19 @@ In summary, this project will benefit all stakeholders with the empowerment of c
 - Chainlink
 - Google Cloud
 - Hardhat
-- Kovan test network 
+- Kovan Test Network
+- Rinkeby Test Network 
 - Metamask
+- Infura
 - Moralis 
+- Openzeppelin
 - Solidity 
 - Web3JS
-
-#### Prerequisites
----
-- Nodejs v14.17.6
-- Npm v7.24.0
-- Yarn v1.22.5
-- npx 7.24.0
-- Solidity 0.7.3 or above
-- Metamask
-
-#### Dependencies
----
-- hardhat-ethers ^2.0.2
-- hardhat-waffle ^2.0.1
-- chai ^4.3.4
-- dotenv ^10.0.0
-- ethereum-waffle ^3.4.0
-- ethers 5.4.7
-- hardhat 2.6.4
+- IPFS
+- Opensea
+- ERC721
+- ERC721URIStorage
+- node.js
+- npm
+- yarn
+- python3
