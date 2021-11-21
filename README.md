@@ -4,13 +4,13 @@
 
 This project was inspired by the vision:
 
-  * Providing satellite broadband connectivity to the underserved remote communities with cryptographic truth.
+  * Providing connectivity to the underserved remote communities with satellite broadband using cryptographic truth.
 
 ## What it does
 
-It is a proof-of-concept for automating manual processes in the Satellite Broadband Service by replacing paper contracts with hybrid smart contracts across synergies from suppliers/vendors, finance, sales, logistics with assets tracking to both partners and end users.
+It is a futuristic approach proof-of-concept for automating manual processes in the Satellite Broadband Service by replacing paper contracts with hybrid smart contracts across synergies from suppliers/vendors, finance, sales, logistics with assets tracking to both partners and end users.
 
-It demonstrates the journey of solutions in both equipment and bandwidth on blockchain augmented by the use of the Chainlink oracle to connect to off-chain data feeds.
+It demonstrates the journey of solutions in both equipment and bandwidth as dynamic NFTs on blockchain augmented by the use of the Chainlink oracle to connect off-chain data feeds and can also tigger off-chain events.
 
 The Satellite Broadband Service Chain is the sequence of activities and processes involved in shipping equipment from suppliers/vendors to the broadband satellite operator. The satellite operator then package them together with broadband solutions to serve telecommunications operators, internet service providers, governments, other service providers and end users.
 
