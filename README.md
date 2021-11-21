@@ -21,8 +21,8 @@ Moreover, this project in itself is a DeFi payment gateway for remote underserve
 In summary, this project will benefit all stakeholders with the empowerment of cryptographic truth to ensure definitive truth in providing connectivity to the underserved communities by bridging the geographical boundaries thus aliviating the digital divide and leaving no one behind.
 
 ## Components
-- Smart Contracts - Hardhat/Solidity (https://github.com/FidelChe/satellite-broadband-service-chain)
-- Front-end - Moralis/React (https://github.com/FidelChe/satellite-broadband-service-chain-ui)
+- Smart Contracts - Hardhat (https://github.com/FidelChe/satellite-broadband-service-chain)
+- Front-end - Moralis (https://github.com/FidelChe/satellite-broadband-service-chain-ui)
 - External Adapter - Google Cloud (https://github.com/FidelChe/marine-traffic-external-adapter)
 - Chainlink Node - Google Cloud (https://github.com/FidelChe/marine-traffic-chainlink-node)
 
