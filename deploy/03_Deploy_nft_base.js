@@ -27,9 +27,9 @@ module.exports = async ({
     const { _deployer } = await getNamedAccounts()
     const chainId = await getChainId()
 
-    const MyNFT = await ethers.getContractFactory("MyNFT");
-    const deployedContract = await MyNFT.deploy();
-    console.log("Deployed MyNFT contract address:", deployedContract.address);
+    const SatelliteBroadbandNFT = await ethers.getContractFactory("SatelliteBroadbandNFT");
+    const deployedContract = await SatelliteBroadbandNFT.deploy();
+    console.log("Deployed SatelliteBroadbandNFT contract address:", deployedContract.address);
 
     // We also save the contract's artifacts and address in the frontend directory
     saveFrontendFiles(deployedContract);
@@ -49,19 +49,19 @@ module.exports = async ({
       }
   
     fs.writeFileSync(
-        chaininfoDir + "/MyNFT-contract-address.json",
-      JSON.stringify({ MyNFT: deployedContract.address }, undefined, 2)
+        chaininfoDir + "/SatelliteBroadbandNFT-contract-address.json",
+      JSON.stringify({ SatelliteBroadbandNFT: deployedContract.address }, undefined, 2)
     );
 
     //fs.writeFileSync(
-        //chaininfoDir + "/MyNFT-chainId.json",
-        //JSON.stringify({ MyNFT: getChainId() }, undefined, 2)
+        //chaininfoDir + "/SatelliteBroadbandNFT-chainId.json",
+        //JSON.stringify({ SatelliteBroadbandNFT: getChainId() }, undefined, 2)
      // );
   
-    const MyNFTArtifact = artifacts.readArtifactSync("MyNFT");
+    const SatelliteBroadbandNFTArtifact = artifacts.readArtifactSync("SatelliteBroadbandNFT");
   
     fs.writeFileSync(
-      contractsDir + "/MyNFT.json",
-      JSON.stringify(MyNFTArtifact, null, 2)
+      contractsDir + "/SatelliteBroadbandNFT.json",
+      JSON.stringify(SatelliteBroadbandNFTArtifact, null, 2)
     );
   }
