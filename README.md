@@ -82,3 +82,6 @@ In summary, this project will benefit all stakeholders with the empowerment of c
 - npm
 - yarn
 - python3
+
+#### Deployment
+- npx hardhat deploy
