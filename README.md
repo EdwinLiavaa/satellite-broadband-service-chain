@@ -1,8 +1,6 @@
 # Blockchain/Chainlink : Satellite Broadband Service Chain
 
-## Inspiration
-
-This project was inspired by the vision:
+## Inspiration - Vision
 
   * Providing connectivity to the underserved remote communities with satellite broadband using cryptographic truth.
 
