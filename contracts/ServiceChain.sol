@@ -11,7 +11,6 @@ import "hardhat/console.sol";
 import './Equipment.sol';
 import './Equipment_O_P.sol';
 import './Equipment_P_E.sol';
-import './APIConsumer.sol';
 
 contract ServiceChain {
 
