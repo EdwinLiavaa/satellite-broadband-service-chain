@@ -18,7 +18,7 @@ The Satellite Broadband Service Chain is the sequence of activities and processe
 
 Moreover, this project in itself is a DeFi payment gateway for remote underserved communities. It also bridge the gap that is not provided by the existing banking infrastructure.
 
-In summary, this project will benefit all stakeholders with the empowerment of cryptographic truth to ensure definitive truth in providing connectivity to the underserved communities by bridging the geographical boundaries thus aliviating the digital divide and leaving no one behind.
+In summary, this project is the world's first direct to consumer marketplace for satellite broadand solutions and for asset-backed dynamic NFTs. It will benefit all stakeholders with the empowerment of cryptographic truth to ensure definitive truth in providing connectivity to the underserved communities by bridging the geographical boundaries thus aliviating the digital divide and leaving no one behind.
 
 ## Components
 - Smart Contracts - Hardhat (https://github.com/FidelChe/satellite-broadband-service-chain)
