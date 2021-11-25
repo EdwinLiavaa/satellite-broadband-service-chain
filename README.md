@@ -62,6 +62,7 @@ In summary, this project is the world's first direct to consumer marketplace for
 ---
 - Alchemy
 - Chainlink
+- Ethereum
 - Google Cloud
 - Hardhat
 - Kovan Test Network
