@@ -19,7 +19,7 @@
     "chai": "^4.2.0",
     "chai-bignumber": "^3.0.0",
     "chai-bn": "^0.2.1",
-    "ethereum-waffle": "^3.2.1",
+    "ethereum-waffle": "^3.4.0",
     "ethers": "^5.5.1",
     "hardhat": "^2.6.4",
     "hardhat-deploy": "^0.7.0-beta.39"
