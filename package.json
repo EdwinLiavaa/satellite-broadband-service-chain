@@ -33,7 +33,7 @@
     "@nomiclabs/hardhat-truffle5": "^2.0.0",
     "@openzeppelin/cli": "^2.8.2",
     "babel-eslint": "^10.1.0",
-    "dotenv": "^8.2.0",
+    "dotenv": "^16.4.5",
     "eslint": "^7.22.0",
     "mocha-skip-if": "^0.0.3",
     "transform": "^1.1.2"
