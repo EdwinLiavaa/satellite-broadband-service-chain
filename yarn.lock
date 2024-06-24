@@ -7864,9 +7864,9 @@ mnemonist@^0.38.0:
   dependencies:
     obliterator "^1.6.1"
 
-mocha-skip-if@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.npmjs.org/mocha-skip-if/-/mocha-skip-if-0.0.3.tgz"
+mocha-skip-if@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/mocha-skip-if/-/mocha-skip-if-1.0.4.tgz#2894c0b93dd53838e6d7abb9d0bac347c7b46f64"
 
 mocha@^10.0.0:
   version "10.4.0"
