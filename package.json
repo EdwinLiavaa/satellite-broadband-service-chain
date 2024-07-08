@@ -22,7 +22,7 @@
     "ethereum-waffle": "^4.0.10",
     "ethers": "^5.5.1",
     "hardhat": "^2.22.5",
-    "hardhat-deploy": "^0.7.0-beta.39"
+    "hardhat-deploy": "^0.12.4"
   },
   "dependencies": {
     "@appliedblockchain/chainlink-contracts": "0.0.4",
