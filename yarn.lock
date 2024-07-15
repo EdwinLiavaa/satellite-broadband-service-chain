@@ -1813,12 +1813,9 @@
     ethereumjs-util "^6.1.0"
     fs-extra "^7.0.1"
 
-"@nomiclabs/hardhat-waffle@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.npmjs.org/@nomiclabs/hardhat-waffle/-/hardhat-waffle-2.0.1.tgz"
-  dependencies:
-    "@types/sinon-chai" "^3.2.3"
-    "@types/web3" "1.0.19"
+"@nomiclabs/hardhat-waffle@^2.0.6":
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@nomiclabs/hardhat-waffle/-/hardhat-waffle-2.0.6.tgz#d11cb063a5f61a77806053e54009c40ddee49a54"
 
 "@nomiclabs/hardhat-web3@^2.0.0":
   version "2.0.0"
@@ -2136,18 +2133,6 @@
   version "0.14.0"
   resolved "https://registry.npmjs.org/@sindresorhus/is/-/is-0.14.0.tgz"
 
-"@sinonjs/commons@^1.7.0":
-  version "1.8.3"
-  resolved "https://registry.npmjs.org/@sinonjs/commons/-/commons-1.8.3.tgz"
-  dependencies:
-    type-detect "4.0.8"
-
-"@sinonjs/fake-timers@^7.1.0":
-  version "7.1.2"
-  resolved "https://registry.npmjs.org/@sinonjs/fake-timers/-/fake-timers-7.1.2.tgz"
-  dependencies:
-    "@sinonjs/commons" "^1.7.0"
-
 "@solidity-parser/parser@^0.8.0":
   version "0.8.2"
   resolved "https://registry.npmjs.org/@solidity-parser/parser/-/parser-0.8.2.tgz"
@@ -2325,15 +2310,15 @@
   dependencies:
     bignumber.js "*"
 
-"@types/bn.js@*", "@types/bn.js@^5.1.0":
-  version "5.1.0"
-  resolved "https://registry.npmjs.org/@types/bn.js/-/bn.js-5.1.0.tgz"
-  dependencies:
-    "@types/node" "*"
-
 "@types/bn.js@^4.11.0", "@types/bn.js@^4.11.3", "@types/bn.js@^4.11.4", "@types/bn.js@^4.11.5":
   version "4.11.6"
   resolved "https://registry.npmjs.org/@types/bn.js/-/bn.js-4.11.6.tgz"
+  dependencies:
+    "@types/node" "*"
+
+"@types/bn.js@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.npmjs.org/@types/bn.js/-/bn.js-5.1.0.tgz"
   dependencies:
     "@types/node" "*"
 
@@ -2343,7 +2328,7 @@
   dependencies:
     "@types/node" "*"
 
-"@types/chai@*", "@types/chai@^4.2.0":
+"@types/chai@^4.2.0":
   version "4.2.19"
   resolved "https://registry.npmjs.org/@types/chai/-/chai-4.2.19.tgz"
 
@@ -2495,39 +2480,15 @@
   version "7.5.8"
   resolved "https://registry.yarnpkg.com/@types/semver/-/semver-7.5.8.tgz#8268a8c57a3e4abd25c165ecd36237db7948a55e"
 
-"@types/sinon-chai@^3.2.3":
-  version "3.2.5"
-  resolved "https://registry.npmjs.org/@types/sinon-chai/-/sinon-chai-3.2.5.tgz"
-  dependencies:
-    "@types/chai" "*"
-    "@types/sinon" "*"
-
-"@types/sinon@*":
-  version "10.0.2"
-  resolved "https://registry.npmjs.org/@types/sinon/-/sinon-10.0.2.tgz"
-  dependencies:
-    "@sinonjs/fake-timers" "^7.1.0"
-
 "@types/solidity-parser-antlr@^0.2.3":
   version "0.2.3"
   resolved "https://registry.npmjs.org/@types/solidity-parser-antlr/-/solidity-parser-antlr-0.2.3.tgz"
-
-"@types/underscore@*":
-  version "1.11.2"
-  resolved "https://registry.npmjs.org/@types/underscore/-/underscore-1.11.2.tgz"
 
 "@types/web3-provider-engine@^14.0.0":
   version "14.0.0"
   resolved "https://registry.npmjs.org/@types/web3-provider-engine/-/web3-provider-engine-14.0.0.tgz"
   dependencies:
     "@types/ethereum-protocol" "*"
-
-"@types/web3@1.0.19":
-  version "1.0.19"
-  resolved "https://registry.npmjs.org/@types/web3/-/web3-1.0.19.tgz"
-  dependencies:
-    "@types/bn.js" "*"
-    "@types/underscore" "*"
 
 "@types/yargs@^11.0.0":
   version "11.1.7"
@@ -11490,7 +11451,7 @@ type-check@~0.3.2:
   dependencies:
     prelude-ls "~1.1.2"
 
-type-detect@4.0.8, type-detect@^4.0.0, type-detect@^4.0.5, type-detect@^4.0.8:
+type-detect@^4.0.0, type-detect@^4.0.5, type-detect@^4.0.8:
   version "4.0.8"
   resolved "https://registry.npmjs.org/type-detect/-/type-detect-4.0.8.tgz"
 
