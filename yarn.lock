@@ -7019,9 +7019,9 @@ hardhat-deploy@^0.12.4:
     qs "^6.9.4"
     zksync-ethers "^5.0.0"
 
-hardhat@^2.22.9:
-  version "2.22.9"
-  resolved "https://registry.yarnpkg.com/hardhat/-/hardhat-2.22.9.tgz#d8f2720561dc60f5cc0ee80c82f9b1907fd61c88"
+hardhat@^2.22.10:
+  version "2.22.10"
+  resolved "https://registry.yarnpkg.com/hardhat/-/hardhat-2.22.10.tgz#826ab56e47af98406e6dd105ba6d2dbb148013d9"
   dependencies:
     "@ethersproject/abi" "^5.1.2"
     "@metamask/eth-sig-util" "^4.0.0"
