@@ -757,9 +757,9 @@
   version "4.11.0"
   resolved "https://registry.yarnpkg.com/@eslint-community/regexpp/-/regexpp-4.11.0.tgz#b0ffd0312b4a3fd2d6f77237e7248a5ad3a680ae"
 
-"@eslint/config-array@^0.17.1":
-  version "0.17.1"
-  resolved "https://registry.yarnpkg.com/@eslint/config-array/-/config-array-0.17.1.tgz#d9b8b8b6b946f47388f32bedfd3adf29ca8f8910"
+"@eslint/config-array@^0.18.0":
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/@eslint/config-array/-/config-array-0.18.0.tgz#37d8fe656e0d5e3dbaea7758ea56540867fd074d"
   dependencies:
     "@eslint/object-schema" "^2.1.4"
     debug "^4.3.1"
@@ -779,13 +779,19 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@eslint/js@9.9.0":
-  version "9.9.0"
-  resolved "https://registry.yarnpkg.com/@eslint/js/-/js-9.9.0.tgz#d8437adda50b3ed4401964517b64b4f59b0e2638"
+"@eslint/js@9.10.0":
+  version "9.10.0"
+  resolved "https://registry.yarnpkg.com/@eslint/js/-/js-9.10.0.tgz#eaa3cb0baec497970bb29e43a153d0d5650143c6"
 
 "@eslint/object-schema@^2.1.4":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@eslint/object-schema/-/object-schema-2.1.4.tgz#9e69f8bb4031e11df79e03db09f9dbbae1740843"
+
+"@eslint/plugin-kit@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@eslint/plugin-kit/-/plugin-kit-0.1.0.tgz#809b95a0227ee79c3195adfb562eb94352e77974"
+  dependencies:
+    levn "^0.4.1"
 
 "@eth-optimism/contracts@0.6.0":
   version "0.6.0"
@@ -5548,15 +5554,16 @@ eslint-visitor-keys@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-4.0.0.tgz#e3adc021aa038a2a8e0b2f8b0ce8f66b9483b1fb"
 
-eslint@^9.9.0:
-  version "9.9.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-9.9.0.tgz#8d214e69ae4debeca7ae97daebbefe462072d975"
+eslint@^9.10.0:
+  version "9.10.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-9.10.0.tgz#0bd74d7fe4db77565d0e7f57c7df6d2b04756806"
   dependencies:
     "@eslint-community/eslint-utils" "^4.2.0"
     "@eslint-community/regexpp" "^4.11.0"
-    "@eslint/config-array" "^0.17.1"
+    "@eslint/config-array" "^0.18.0"
     "@eslint/eslintrc" "^3.1.0"
-    "@eslint/js" "9.9.0"
+    "@eslint/js" "9.10.0"
+    "@eslint/plugin-kit" "^0.1.0"
     "@humanwhocodes/module-importer" "^1.0.1"
     "@humanwhocodes/retry" "^0.3.0"
     "@nodelib/fs.walk" "^1.2.8"
@@ -5579,7 +5586,6 @@ eslint@^9.9.0:
     is-glob "^4.0.0"
     is-path-inside "^3.0.3"
     json-stable-stringify-without-jsonify "^1.0.1"
-    levn "^0.4.1"
     lodash.merge "^4.6.2"
     minimatch "^3.1.2"
     natural-compare "^1.4.0"
