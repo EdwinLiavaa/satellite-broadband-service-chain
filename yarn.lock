@@ -2369,9 +2369,9 @@
   version "0.1.2"
   resolved "https://registry.npmjs.org/@openzeppelin/fuzzy-solidity-import-parser/-/fuzzy-solidity-import-parser-0.1.2.tgz"
 
-"@openzeppelin/hardhat-upgrades@^3.7.0":
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/@openzeppelin/hardhat-upgrades/-/hardhat-upgrades-3.7.0.tgz#fc9562ab01edfa1eafb49870d8bf37e038a3ce49"
+"@openzeppelin/hardhat-upgrades@^3.8.0":
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/@openzeppelin/hardhat-upgrades/-/hardhat-upgrades-3.8.0.tgz#df865f208a8fd379e136b5f8454e1bcc5417dedb"
   dependencies:
     "@openzeppelin/defender-sdk-base-client" "^1.14.4"
     "@openzeppelin/defender-sdk-deploy-client" "^1.14.4"
