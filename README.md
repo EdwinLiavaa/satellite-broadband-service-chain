@@ -1,7 +1,7 @@
 # Blockchain/Chainlink : Satellite Broadband Service Chain
 
 <p align="center">
- <img width="1000" src="https://github.com/EdwinLiavaa/liavaa.space/blob/main/pic.png">
+ <img width="1000" src="https://github.com/EdwinLiavaa/satellite-broadband-service-chain/blob/main/pic.png">
 </p>
 
 ## Inspiration - Vision
