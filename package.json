@@ -21,7 +21,7 @@
     "chai-bn": "^0.2.1",
     "ethereum-waffle": "^4.0.10",
     "ethers": "^6.13.5",
-    "hardhat": "^2.22.17",
+    "hardhat": "^2.22.18",
     "hardhat-deploy": "^0.14.0"
   },
   "dependencies": {
