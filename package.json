@@ -16,7 +16,7 @@
     "@nomiclabs/hardhat-web3": "^2.0.1",
     "@openzeppelin/contracts": "^5.2.0",
     "@openzeppelin/hardhat-upgrades": "^3.9.0",
-    "chai": "^5.1.2",
+    "chai": "^5.2.0",
     "chai-bignumber": "^3.1.0",
     "chai-bn": "^0.2.1",
     "ethereum-waffle": "^4.0.10",
