@@ -2525,45 +2525,45 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@nomicfoundation/edr-darwin-arm64@0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@nomicfoundation/edr-darwin-arm64/-/edr-darwin-arm64-0.11.0.tgz#fa791451c5ce2acf6634143bca9fe8f1b5c66603"
+"@nomicfoundation/edr-darwin-arm64@0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@nomicfoundation/edr-darwin-arm64/-/edr-darwin-arm64-0.11.2.tgz#0debc904abf5ad710b3e024b2537ca5ae7d3fbee"
 
-"@nomicfoundation/edr-darwin-x64@0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@nomicfoundation/edr-darwin-x64/-/edr-darwin-x64-0.11.0.tgz#b1aaf0bfb331f6d136a92cbe31f184e2209e7a4f"
+"@nomicfoundation/edr-darwin-x64@0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@nomicfoundation/edr-darwin-x64/-/edr-darwin-x64-0.11.2.tgz#811b0c068e016c1b11611cde2de15e986b4d766d"
 
-"@nomicfoundation/edr-linux-arm64-gnu@0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@nomicfoundation/edr-linux-arm64-gnu/-/edr-linux-arm64-gnu-0.11.0.tgz#fef6763c5d42bb68b4fc95df45c4745a0e31df93"
+"@nomicfoundation/edr-linux-arm64-gnu@0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@nomicfoundation/edr-linux-arm64-gnu/-/edr-linux-arm64-gnu-0.11.2.tgz#6dc83499408ba053978062ad4371cc8becddfe73"
 
-"@nomicfoundation/edr-linux-arm64-musl@0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@nomicfoundation/edr-linux-arm64-musl/-/edr-linux-arm64-musl-0.11.0.tgz#ef89d5d2aefc1f8d4f7c699c59b8897a645d33eb"
+"@nomicfoundation/edr-linux-arm64-musl@0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@nomicfoundation/edr-linux-arm64-musl/-/edr-linux-arm64-musl-0.11.2.tgz#1001dcaf33e6c8e00c0934a04aeaa6683cefa158"
 
-"@nomicfoundation/edr-linux-x64-gnu@0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@nomicfoundation/edr-linux-x64-gnu/-/edr-linux-x64-gnu-0.11.0.tgz#97432126110aa805b761d4743ab158698cae6d66"
+"@nomicfoundation/edr-linux-x64-gnu@0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@nomicfoundation/edr-linux-x64-gnu/-/edr-linux-x64-gnu-0.11.2.tgz#ddb68776b95d2666340817908a0e1bd470761d14"
 
-"@nomicfoundation/edr-linux-x64-musl@0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@nomicfoundation/edr-linux-x64-musl/-/edr-linux-x64-musl-0.11.0.tgz#7605fddbada22dfdd14b15f4ac562014d9c82332"
+"@nomicfoundation/edr-linux-x64-musl@0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@nomicfoundation/edr-linux-x64-musl/-/edr-linux-x64-musl-0.11.2.tgz#3ed4cd7f2d3879122e0b24b6433bf3d2eaadd349"
 
-"@nomicfoundation/edr-win32-x64-msvc@0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@nomicfoundation/edr-win32-x64-msvc/-/edr-win32-x64-msvc-0.11.0.tgz#6766175f3ec47bfbda0429ca00fed4ae5632a3c4"
+"@nomicfoundation/edr-win32-x64-msvc@0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@nomicfoundation/edr-win32-x64-msvc/-/edr-win32-x64-msvc-0.11.2.tgz#459a6af0e99a88f78cf2ac54fe32a7b702bdd2a7"
 
-"@nomicfoundation/edr@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@nomicfoundation/edr/-/edr-0.11.0.tgz#d8b0ba4dfd7d93b9c54762e72eb9cd4e8244ce46"
+"@nomicfoundation/edr@^0.11.1":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@nomicfoundation/edr/-/edr-0.11.2.tgz#fd85fc404de656bc14228d88f7ada562cc10d522"
   dependencies:
-    "@nomicfoundation/edr-darwin-arm64" "0.11.0"
-    "@nomicfoundation/edr-darwin-x64" "0.11.0"
-    "@nomicfoundation/edr-linux-arm64-gnu" "0.11.0"
-    "@nomicfoundation/edr-linux-arm64-musl" "0.11.0"
-    "@nomicfoundation/edr-linux-x64-gnu" "0.11.0"
-    "@nomicfoundation/edr-linux-x64-musl" "0.11.0"
-    "@nomicfoundation/edr-win32-x64-msvc" "0.11.0"
+    "@nomicfoundation/edr-darwin-arm64" "0.11.2"
+    "@nomicfoundation/edr-darwin-x64" "0.11.2"
+    "@nomicfoundation/edr-linux-arm64-gnu" "0.11.2"
+    "@nomicfoundation/edr-linux-arm64-musl" "0.11.2"
+    "@nomicfoundation/edr-linux-x64-gnu" "0.11.2"
+    "@nomicfoundation/edr-linux-x64-musl" "0.11.2"
+    "@nomicfoundation/edr-win32-x64-msvc" "0.11.2"
 
 "@nomicfoundation/slang@^0.18.3":
   version "0.18.3"
@@ -8553,13 +8553,13 @@ hardhat-deploy@^1.0.2:
     qs "^6.9.4"
     zksync-ethers "^5.0.0"
 
-hardhat@^2.24.2:
-  version "2.24.2"
-  resolved "https://registry.yarnpkg.com/hardhat/-/hardhat-2.24.2.tgz#fe44c0d264557880a4e9e9a03fd03b5b68e95a5a"
+hardhat@^2.25.0:
+  version "2.25.0"
+  resolved "https://registry.yarnpkg.com/hardhat/-/hardhat-2.25.0.tgz#473bf07b62a0ea30cf003e4585f71a0ffc70c739"
   dependencies:
     "@ethereumjs/util" "^9.1.0"
     "@ethersproject/abi" "^5.1.2"
-    "@nomicfoundation/edr" "^0.11.0"
+    "@nomicfoundation/edr" "^0.11.1"
     "@nomicfoundation/solidity-analyzer" "^0.1.0"
     "@sentry/node" "^5.18.1"
     "@types/bn.js" "^5.1.0"
