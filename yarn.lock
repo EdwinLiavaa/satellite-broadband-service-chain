@@ -2602,9 +2602,9 @@
     table "^6.8.0"
     undici "^5.14.0"
 
-"@nomiclabs/hardhat-truffle5@^2.0.0", "@nomiclabs/hardhat-truffle5@^2.0.7":
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/@nomiclabs/hardhat-truffle5/-/hardhat-truffle5-2.0.7.tgz#7519eadd2c6c460c2addc3d4d6efda7a8883361e"
+"@nomiclabs/hardhat-truffle5@^2.0.0", "@nomiclabs/hardhat-truffle5@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@nomiclabs/hardhat-truffle5/-/hardhat-truffle5-2.1.0.tgz#e8fb42750084ebf331ca983b585bc9391520aae3"
   dependencies:
     "@nomiclabs/truffle-contract" "^4.2.23"
     "@types/chai" "^4.2.0"
