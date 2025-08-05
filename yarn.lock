@@ -2616,9 +2616,9 @@
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/@nomiclabs/hardhat-waffle/-/hardhat-waffle-2.0.6.tgz#d11cb063a5f61a77806053e54009c40ddee49a54"
 
-"@nomiclabs/hardhat-web3@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@nomiclabs/hardhat-web3/-/hardhat-web3-2.0.1.tgz#c0a3f7685d807bbf16641d5354ab43167c51c423"
+"@nomiclabs/hardhat-web3@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@nomiclabs/hardhat-web3/-/hardhat-web3-2.1.0.tgz#5aacf9700a8bd7301293bf9a743977d6a4edf778"
 
 "@nomiclabs/truffle-contract@^4.2.23":
   version "4.2.23"
